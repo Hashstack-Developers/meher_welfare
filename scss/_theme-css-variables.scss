@@ -1,0 +1,33 @@
+// Exposes Sass tokens as CSS custom properties — change $primary (etc.) above the Bootstrap
+// import in style.scss, recompile, or override :root at runtime for experiments.
+
+:root {
+  --mwt-primary: #{$primary};
+  // Browser-derived shade so one token updates both; avoids fractional `rgb()` from Sass `darken()`.
+  --mwt-primary-dark: color-mix(in srgb, var(--mwt-primary) 76%, #000000);
+  --mwt-primary-rgb: #{red($primary)}, #{green($primary)}, #{blue($primary)};
+
+  --mwt-secondary: #{$secondary};
+  --mwt-secondary-rgb: #{red($secondary)}, #{green($secondary)}, #{blue($secondary)};
+  --mwt-tertiary: #{$tertiary};
+  --mwt-tertiary-rgb: #{red($tertiary)}, #{green($tertiary)}, #{blue($tertiary)};
+  --mwt-quarternary: #{$quarternary};
+  --mwt-quarternary-rgb: #{red($quarternary)}, #{green($quarternary)}, #{blue($quarternary)};
+
+  --mwt-white: #{$white};
+  --mwt-black: #{$black};
+
+  --mwt-surface: #ffffff;
+  --mwt-surface-muted: #fafafa;
+  --mwt-text-strong: #222222;
+  --mwt-text-muted: #888888;
+  --mwt-text-faint: #aaaaaa;
+
+  --mwt-neutral-dark-start: #2d2d2d;
+  --mwt-neutral-dark-end: #1a1a1a;
+
+  --mwt-success: #22c55e;
+  --mwt-success-rgb: 34, 197, 94;
+
+  --mwt-loader-track: #eeeeee;
+}

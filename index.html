@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welfare - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .donation-live-section { background: var(--mwt-surface-muted); }
+      .donation-live-card {
+        background: var(--mwt-surface);
+        border-radius: 12px;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+        border: 1px solid rgba(0,0,0,0.06);
+        overflow: hidden;
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      .donation-live-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 1.25rem 1.5rem;
+        background: linear-gradient(135deg, var(--mwt-neutral-dark-start) 0%, var(--mwt-neutral-dark-end) 100%);
+        color: var(--mwt-white);
+      }
+      .donation-live-header h3 { margin: 0; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.02em; }
+      .donation-live-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 600;
+        color: rgba(255,255,255,0.85);
+      }
+      .donation-live-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--mwt-success);
+        box-shadow: 0 0 0 0 rgba(var(--mwt-success-rgb), 0.6);
+        animation: donationPulse 2s ease-out infinite;
+      }
+      @keyframes donationPulse {
+        0% { box-shadow: 0 0 0 0 rgba(var(--mwt-success-rgb), 0.45); }
+        70% { box-shadow: 0 0 0 12px rgba(var(--mwt-success-rgb), 0); }
+        100% { box-shadow: 0 0 0 0 rgba(var(--mwt-success-rgb), 0); }
+      }
+      .donation-live-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        max-height: 380px;
+        overflow: hidden;
+        position: relative;
+      }
+      .donation-live-list::after {
+        content: "";
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        height: 48px;
+        pointer-events: none;
+        background: linear-gradient(to bottom, transparent, var(--mwt-surface));
+      }
+      .donation-feed-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 1.5rem;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        animation: donationEnter 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+      .donation-feed-item:nth-child(even) { background: rgba(var(--mwt-primary-rgb), 0.04); }
+      @keyframes donationEnter {
+        from { opacity: 0; transform: translateX(-16px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      .donation-feed-avatar {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: linear-gradient(145deg, var(--mwt-primary), var(--mwt-primary-dark));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--mwt-white);
+        font-size: 1.1rem;
+      }
+      .donation-feed-body { flex: 1; min-width: 0; }
+      .donation-feed-body strong { color: var(--mwt-text-strong); font-weight: 600; }
+      .donation-feed-meta {
+        font-size: 0.8rem;
+        color: var(--mwt-text-muted);
+        margin-top: 2px;
+      }
+      .donation-feed-amount {
+        flex-shrink: 0;
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--mwt-primary);
+        font-variant-numeric: tabular-nums;
+      }
+      .donation-feed-time {
+        font-size: 0.75rem;
+        color: var(--mwt-text-faint);
+        white-space: nowrap;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .donation-feed-item { animation: none !important; }
+        .donation-live-dot { animation: none !important; }
+      }
+    </style>
+  </head>
+  <body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Meher Welfare Trust</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="causes.html" class="nav-link">Campaigns</a></li>
+          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap" style="background-image: url('images/bg_7.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">At Meher Welfare Trust, We Empower Lives Through Compassionate Action</h1>
+            <!-- <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Created by <a href="#">Colorlib.com</a></p> -->
+
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="./images/video.mp4" class="btn btn-white btn-outline-white px-4 py-3 popup-vimeo"><span class="icon-play mr-2"></span>Watch Video</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-counter ftco-intro" id="section-counter">
+    	<div class="container">
+    		<div class="row no-gutters">
+    			<div class="col-md-5 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 color-1 align-items-stretch">
+              <div class="text">
+              	<span>Served Over</span>
+                <strong class="number" data-number="1432805">0</strong>
+                <span>Children in 190 countries in the world</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 color-2 align-items-stretch">
+              <div class="text">
+              	<h3 class="mb-4">Donate Money</h3>
+              	<p>Serving humanity with compassion, dignity, and hope.</p>
+              	<p><a href="./donate.html" class="btn btn-white px-3 py-2 mt-2">Donate Now</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 color-3 align-items-stretch">
+              <div class="text">
+              	<h3 class="mb-4">Be a Volunteer</h3>
+              	<p>Even the all-powerful Pointing has no control about the blind texts.</p>
+              	<p><a href="./contact.html" class="btn btn-white px-3 py-2 mt-2">Be A Volunteer</a></p>
+              </div>
+            </div>
+          </div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row">
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 d-flex services p-3 py-4 d-block">
+              <div class="icon d-flex mb-3"><span class="flaticon-donation-1"></span></div>
+              <div class="media-body pl-4">
+                <h3 class="heading">Make Donation</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 d-flex services p-3 py-4 d-block">
+              <div class="icon d-flex mb-3"><span class="flaticon-charity"></span></div>
+              <div class="media-body pl-4">
+                <h3 class="heading">Become A Volunteer</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 d-flex services p-3 py-4 d-block">
+              <div class="icon d-flex mb-3"><span class="flaticon-donation"></span></div>
+              <div class="media-body pl-4">
+                <h3 class="heading">Sponsorship</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>    
+          </div>
+        </div>
+    	</div>
+    </section>
+
+
+    <section class="ftco-section bg-light">
+    	<div class="container-fluid">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-5 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Our Campaigns</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-12 ftco-animate">
+    				<div class="carousel-cause owl-carousel">
+	    				<div class="item">
+	    					<div class="cause-entry">
+		    					<a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+		    					<div class="text p-3 p-md-4">
+		    						<h3><a href="#">Clean water for the urban area</a></h3>
+		    						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+		    						<span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+		                <div class="progress custom-progress-success">
+		                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+		                </div>
+		                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+		    					</div>
+		    				</div>
+	    				</div>
+	    				<div class="item">
+	    					<div class="cause-entry">
+		    					<a href="#" class="img" style="background-image: url(images/cause-2.jpg);"></a>
+		    					<div class="text p-3 p-md-4">
+		    						<h3><a href="#">Clean water for the urban area</a></h3>
+		    						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+		    						<span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+		                <div class="progress custom-progress-success">
+		                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+		                </div>
+		                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+		    					</div>
+		    				</div>
+	    				</div>
+	    				<div class="item">
+	    					<div class="cause-entry">
+		    					<a href="#" class="img" style="background-image: url(images/cause-3.jpg);"></a>
+		    					<div class="text p-3 p-md-4">
+		    						<h3><a href="#">Clean water for the urban area</a></h3>
+		    						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+		    						<span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+		                <div class="progress custom-progress-success">
+		                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+		                </div>
+		                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+		    					</div>
+		    				</div>
+	    				</div>
+	    				<div class="item">
+	    					<div class="cause-entry">
+		    					<a href="#" class="img" style="background-image: url(images/cause-4.jpg);"></a>
+		    					<div class="text p-3 p-md-4">
+		    						<h3><a href="#">Clean water for the urban area</a></h3>
+		    						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+		    						<span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+		                <div class="progress custom-progress-success">
+		                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+		                </div>
+		                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+		    					</div>
+		    				</div>
+	    				</div>
+	    				<div class="item">
+	    					<div class="cause-entry">
+		    					<a href="#" class="img" style="background-image: url(images/cause-5.jpg);"></a>
+		    					<div class="text p-3 p-md-4">
+		    						<h3><a href="#">Clean water for the urban area</a></h3>
+		    						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+		    						<span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+		                <div class="progress custom-progress-success">
+		                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+		                </div>
+		                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+		    					</div>
+		    				</div>
+	    				</div>
+	    				<div class="item">
+	    					<div class="cause-entry">
+		    					<a href="#" class="img" style="background-image: url(images/cause-6.jpg);"></a>
+		    					<div class="text p-3 p-md-4">
+		    						<h3><a href="#">Clean water for the urban area</a></h3>
+		    						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+		    						<span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+		                <div class="progress custom-progress-success">
+		                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+		                </div>
+		                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+		    					</div>
+		    				</div>
+	    				</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section donation-live-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-4 pb-2">
+          <div class="col-md-9 col-lg-8 heading-section ftco-animate text-center">
+            <h2 class="mb-3">Latest Donations</h2>
+            <p class="mb-0">Recent contributions to Meher Welfare Trust. Donor names are shown as <strong>Anonymous</strong> to protect privacy amounts and causes are representative of real activity.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10 ftco-animate">
+            <div class="donation-live-card" id="donation-live-card">
+              <div class="donation-live-header">
+                <h3 style="color: white;" >Live contribution feed</h3>
+                <span class="donation-live-badge"><span class="donation-live-dot" aria-hidden="true"></span> Updating</span>
+              </div>
+              <ul class="donation-live-list" id="donation-live-list" aria-live="polite" aria-relevant="additions"></ul>
+            </div>
+            <p class="text-center text-muted small mt-3 mb-0">Demo feed for illustration. For tax receipts or questions about your gift, please <a href="contact.html">contact us</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-gallery">
+    	<div class="d-md-flex">
+	    	<a href="images/p1.jpeg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/p1.jpeg);">
+	    		<div class="icon d-flex justify-content-center align-items-center">
+	    			<span class="icon-search"></span>
+	    		</div>
+	    	</a>
+	    	<a href="images/p2.jpeg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/p2.jpeg);">
+	    		<div class="icon d-flex justify-content-center align-items-center">
+	    			<span class="icon-search"></span>
+	    		</div>
+	    	</a>
+	    	<a href="images/p3.jpeg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/p3.jpeg);">
+	    		<div class="icon d-flex justify-content-center align-items-center">
+	    			<span class="icon-search"></span>
+	    		</div>
+	    	</a>
+	    	<a href="images/p4.jpeg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/p4.jpeg);">
+	    		<div class="icon d-flex justify-content-center align-items-center">
+	    			<span class="icon-search"></span>
+	    		</div>
+	    	</a>
+    	</div>
+    	<div class="d-md-flex">
+	    	<a href="images/p5.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/p5.jpeg);">
+	    		<div class="icon d-flex justify-content-center align-items-center">
+	    			<span class="icon-search"></span>
+	    		</div>
+	    	</a>
+	    	<a href="images/p6.jpeg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/p6.jpeg);">
+	    		<div class="icon d-flex justify-content-center align-items-center">
+	    			<span class="icon-search"></span>
+	    		</div>
+	    	</a>
+	    	<a href="images/p7.jpeg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images//p7.jpeg);">
+	    		<div class="icon d-flex justify-content-center align-items-center">
+	    			<span class="icon-search"></span>
+	    		</div>
+	    	</a>
+	    	<a href="images/p8.jpeg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/p8.jpeg);">
+	    		<div class="icon d-flex justify-content-center align-items-center">
+	    			<span class="icon-search"></span>
+	    		</div>
+	    	</a>
+	    </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Our Mission Matters</h2>
+            <p>Join us in making a difference through our programs focused on humanitarian efforts and support.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry align-self-stretch">
+              <a href="blog-community-development.html" class="block-20" style="background-image: url('images/commu1.jpeg');">
+              </a>
+              <div class="text p-4 d-block">
+              	<div class="meta mb-3">
+                  <!-- <div><a href="#">Sept 10, 2018</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
+                </div>
+                <h3 class="heading mt-3"><a href="blog-community-development.html">Community Development</a></h3>
+                <p>Empowering communities through education, health, and sustainable living initiatives worldwide.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry align-self-stretch">
+              <a href="blog-food-security.html" class="block-20" style="background-image: url('images/food1.jpeg');">
+              </a>
+              <div class="text p-4 d-block">
+              	<div class="meta mb-3">
+                  <!-- <div><a href="#">Sept 10, 2018</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
+                </div>
+                <h3 class="heading mt-3"><a href="blog-food-security.html">Food Security</a></h3>
+                <p>Providing nutritional support and resources to families in need for a healthier future.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry align-self-stretch">
+              <a href="blog-impactful-change.html" class="block-20" style="background-image: url('images/p2.jpeg');">
+              </a>
+              <div class="text p-4 d-block">
+              	<div class="meta mb-3">
+                  <!-- <div><a href="#">Sept 10, 2018</a></div> -->
+                  <!-- <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
+                </div>
+                <h3 class="heading mt-3"><a href="blog-impactful-change.html">Impactful Change</a></h3>
+                <p>Support our efforts to transform lives and create lasting change through your generous donations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Our Latest Events</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry align-self-stretch">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/event-1.jpg');">
+              </a>
+              <div class="text p-4 d-block">
+              	<div class="meta mb-3">
+                  <div><a href="#">Sep. 10, 2018</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
+                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry align-self-stretch">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/event-2.jpg');">
+              </a>
+              <div class="text p-4 d-block">
+              	<div class="meta mb-3">
+                  <div><a href="#">Sep. 10, 2018</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
+                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry align-self-stretch">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/event-3.jpg');">
+              </a>
+              <div class="text p-4 d-block">
+              	<div class="meta mb-3">
+                  <div><a href="#">Sep. 10, 2018</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
+                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+		<section class="ftco-section-3 img" style="background-image: url(images/p8.jpeg);">
+    	<div class="overlay"></div>
+    	<div class="container">
+    		<div class="row d-md-flex">
+    		<div class="col-md-6 d-flex ftco-animate">
+    			<div class="img img-2 align-self-stretch" style="background-image: url(images/p7.jpeg);"></div>
+    		</div>
+    		<div class="col-md-6 volunteer pl-md-5 ftco-animate">
+    			<h3 class="mb-3">Be a volunteer</h3>
+    			<p class="text-light small mb-3" style="opacity:0.88">Tell us how you would like to help. We will reply by email. On PHP hosting, edit <code class="text-light" style="opacity:0.95">volunteer-submit.php</code> to set your inbox address.</p>
+    			<form action="#" class="volunter-form" novalidate>
+            <div class="form-group">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required autocomplete="name" maxlength="120">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" placeholder="Your Email" required autocomplete="email" maxlength="200">
+            </div>
+            <div class="form-group">
+              <textarea name="message" cols="30" rows="3" class="form-control" placeholder="Message" required maxlength="4000"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Send Message" class="btn btn-white py-3 px-5">
+            </div>
+            <p class="volunteer-form-status small mb-0" role="status" aria-live="polite"></p>
+          </form>
+    		</div>    			
+    		</div>
+    	</div>
+    </section>
+
+    <footer class="ftco-footer ftco-section img">
+    	<div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About Us</h2>
+              <p>Meher Welfare Trust was founded with one goal to serve those who need it most. From humble beginnings, we've grown into a grassroots organization with a strong focus on helping families in Pakistan and abroad</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.tiktok.com/@meherwelfaretrust" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><span class="footer-social-tiktok" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Recent Blog</h2>
+              <div class="block-21 mb-4 d-flex">
+                <a href="blog-community-development.html" class="blog-img mr-4" style="background-image: url(images/commu1.jpeg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="blog-community-development.html">Community development: education, health &amp; local leadership</a></h3>
+                  <div class="meta">
+                    <div><a href="blog-community-development.html"><span class="icon-calendar"></span> May 3, 2026</a></div>
+                    <div><a href="blog-community-development.html"><span class="icon-person"></span> Meher Welfare Trust</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a href="blog-food-security.html" class="blog-img mr-4" style="background-image: url(images/food1.jpeg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="blog-food-security.html">Food security &amp; nutrition support for vulnerable families</a></h3>
+                  <div class="meta">
+                    <div><a href="blog-food-security.html"><span class="icon-calendar"></span> May 5, 2026</a></div>
+                    <div><a href="blog-food-security.html"><span class="icon-person"></span> Meher Welfare Trust</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+             <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Site Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html" class="py-2 d-block">Home</a></li>
+                <li><a href="about.html" class="py-2 d-block">About</a></li>
+                <li><a href="donate.html" class="py-2 d-block">Donate</a></li>
+                <li><a href="causes.html" class="py-2 d-block">Campaigns</a></li>
+                <li><a href="event.html" class="py-2 d-block">Events</a></li>
+                <li><a href="blog.html" class="py-2 d-block">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Powered <i class="icon-heart" aria-hidden="true"></i> by <a href="https://hashstackdevelopers.com" target="_blank">Hashstack Developers</a> -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Powered by <a href="https://hashstackdevelopers.com" target="_blank">Hashstack Developers</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/site-forms.js"></script>
+  <script>
+  (function () {
+    var causes = [
+      'Food security fund',
+      'Community development',
+      'Emergency relief',
+      'Education support',
+      'Zakat / general welfare',
+      'Winter relief',
+      'Medical aid pool'
+    ];
+    var listEl = document.getElementById('donation-live-list');
+    if (!listEl) return;
+
+    function randomAmount() {
+      var presets = [
+        30, 35, 40, 45, 50, 60, 75, 85, 100, 120, 150, 175, 200, 225, 250,
+        275, 300, 325, 350, 375, 400, 425, 450, 475, 500, 525, 550, 600, 650,
+        700, 750, 800, 850, 900
+      ];
+      return presets[Math.floor(Math.random() * presets.length)];
+    }
+
+    function formatUsd(n) {
+      return '$' + n.toLocaleString('en-US');
+    }
+
+    function relativeTime(ts) {
+      var s = Math.max(0, Math.floor((Date.now() - ts) / 1000));
+      if (s < 40) return 'Just now';
+      if (s < 3600) {
+        var m = Math.floor(s / 60);
+        if (m < 1) m = 1;
+        return m + 'm ago';
+      }
+      if (s < 86400) return Math.floor(s / 3600) + 'h ago';
+      return Math.floor(s / 86400) + 'd ago';
+    }
+
+    function buildItem(ts) {
+      var li = document.createElement('li');
+      li.className = 'donation-feed-item';
+      li.setAttribute('data-ts', String(ts));
+      li.innerHTML =
+        '<div class="donation-feed-avatar" aria-hidden="true"><span class="icon-user"></span></div>' +
+        '<div class="donation-feed-body">' +
+          '<div><strong>Anonymous</strong> · <span class="donation-feed-cause">' + causes[Math.floor(Math.random() * causes.length)] + '</span></div>' +
+          '<div class="donation-feed-meta">Private donation · Thank you</div>' +
+        '</div>' +
+        '<div class="text-right">' +
+          '<div class="donation-feed-amount">' + formatUsd(randomAmount()) + '</div>' +
+          '<div class="donation-feed-time donation-feed-rel">' + relativeTime(ts) + '</div>' +
+        '</div>';
+      return li;
+    }
+
+    function refreshTimes() {
+      var items = listEl.querySelectorAll('.donation-feed-item');
+      for (var i = 0; i < items.length; i++) {
+        var ts = parseInt(items[i].getAttribute('data-ts'), 10);
+        var rel = items[i].querySelector('.donation-feed-rel');
+        if (rel && !isNaN(ts)) rel.textContent = relativeTime(ts);
+      }
+    }
+
+    var now = Date.now();
+    var seedAges = [70000, 200000, 420000, 720000, 1100000, 1800000, 2800000];
+    for (var k = 0; k < seedAges.length; k++) {
+      listEl.appendChild(buildItem(now - seedAges[k] - Math.floor(Math.random() * 28000)));
+    }
+
+    function pushDonation() {
+      var li = buildItem(Date.now());
+      listEl.insertBefore(li, listEl.firstChild);
+      while (listEl.children.length > 9) {
+        listEl.removeChild(listEl.lastChild);
+      }
+      void li.offsetWidth;
+      li.style.animation = 'none';
+      li.offsetHeight;
+      li.style.animation = '';
+    }
+
+    function scheduleNextPush() {
+      var delays = [60000, 120000, 300000];
+      var ms = delays[Math.floor(Math.random() * delays.length)];
+      setTimeout(function () {
+        pushDonation();
+        scheduleNextPush();
+      }, ms);
+    }
+
+    setInterval(refreshTimes, 10000);
+    scheduleNextPush();
+  })();
+  </script>
+    
+  </body>
+</html>
